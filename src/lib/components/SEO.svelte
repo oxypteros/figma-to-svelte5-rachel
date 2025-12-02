@@ -15,7 +15,7 @@
 	const demoUrl = 'https://rachel-demo.oxypteros.com';
 
 	// Schema Logic
-	const schema = {
+	let schema = $derived({
 		'@context': 'https://schema.org',
 		'@graph': [
 			{
@@ -46,10 +46,10 @@
 				inLanguage: 'en'
 			}
 		]
-	};
+	});
 
 	// Serialize it once
-	const jsonLd = `<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`;
+	let jsonLd = $derived(`<script type="application/ld+json">${JSON.stringify(schema)}<\/script>`);
 </script>
 
 <svelte:head>
