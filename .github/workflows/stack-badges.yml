@@ -1,0 +1,72 @@
+name: Generate Dev Stack Badges
+on:
+  push:
+    paths:
+      - 'package.json' 
+  workflow_dispatch:
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract Versions & Generate Badges
+        run: |
+          mkdir -p .github/badges
+
+          
+          # generate_badge "PackageName" "JsonField" "Color" "LogoSlug" "LogoColor" "LabelColor"
+          generate_badge() {
+            NAME=$1
+            PACKAGE_JSON_KEY=$2
+            COLOR=$3
+            LOGO=$4
+            LOGO_COLOR=$5
+            LABEL_COLOR=$6
+            
+            RAW_VERSION=$(jq -r ".devDependencies[\"$PACKAGE_JSON_KEY\"] // .dependencies[\"$PACKAGE_JSON_KEY\"]" package.json)
+            
+            # Package is missing test
+            if [ "$RAW_VERSION" == "null" ] || [ -z "$RAW_VERSION" ]; then
+                echo "⚠️  $NAME ($PACKAGE_JSON_KEY) not found in package.json. Skipping badge."
+                return 0 
+            fi
+            
+            # Strip ^, ~, v characters and keep only MAJOR.MINOR
+            VERSION=$(jq -r ".devDependencies[\"$PACKAGE_JSON_KEY\"] // .dependencies[\"$PACKAGE_JSON_KEY\"]" package.json | sed 's/[\^~v]//g' | cut -d. -f1,2)
+            
+            if [ "$VERSION" == "null" ] || [ -z "$VERSION" ]; then
+                VERSION="latest"
+            fi
+
+            echo "✅ Found $NAME version: $VERSION. Generating Badge..."
+
+            # Download SVG
+            curl -s -G "https://img.shields.io/badge/$NAME-$VERSION-$COLOR" \
+              -d style=flat \
+              -d logo=$LOGO \
+              -d logoColor=$LOGO_COLOR \
+              -d labelColor=%23$LABEL_COLOR \
+              > .github/badges/$LOGO.svg
+          }
+
+          # Stack badges
+          
+          # Svelte 
+          generate_badge "Svelte" "svelte" "FF3E00" "svelte" "FF3E00" "F0F0F0"
+          
+          # Tailwind
+          generate_badge "Tailwind" "tailwindcss" "06B6D4" "tailwindcss" "06B6D4" "F0F0F0"
+          
+          # TypeScript
+          generate_badge "TypeScript" "typescript" "3178C6" "typescript" "3178C6" "F0F0F0"
+
+      - name: Commit Badges
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Update Stack Versions [skip ci]"
+          file_pattern: .github/badges/*.svg
