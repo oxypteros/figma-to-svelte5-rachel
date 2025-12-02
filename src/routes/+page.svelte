@@ -1,6 +1,7 @@
 <script lang="ts">
   import SEO from "$lib/components/SEO.svelte";
   import Header from "$lib/components/Header.svelte";
+  	import Cover from '$lib/components/Cover.svelte';
 </script>
 
 <SEO
@@ -10,6 +11,7 @@
 <div class="relative min-h-[200vh]">
   <Header />
   <main class="bg-wh-100 dark:bg-bl-90 relative z-20">
+    <Cover />
     <div class="bg-wh-100 dark:bg-bl-90 z-30 relative"></div>
   </main>
   <footer></footer>
