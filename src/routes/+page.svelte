@@ -1,7 +1,8 @@
 <script lang="ts">
   import SEO from "$lib/components/SEO.svelte";
   import Header from "$lib/components/Header.svelte";
-  	import Cover from '$lib/components/Cover.svelte';
+  import Cover from "$lib/components/Cover.svelte";
+  import Hero from "$lib/components/Hero.svelte";
 </script>
 
 <SEO
@@ -12,7 +13,9 @@
   <Header />
   <main class="bg-wh-100 dark:bg-bl-90 relative z-20">
     <Cover />
-    <div class="bg-wh-100 dark:bg-bl-90 z-30 relative"></div>
+    <div class="bg-wh-100 dark:bg-bl-90 z-30 relative">
+      <Hero />
+    </div>
   </main>
   <footer></footer>
 </div>
