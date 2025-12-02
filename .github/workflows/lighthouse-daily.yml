@@ -1,0 +1,50 @@
+name: Daily Lighthouse Audit
+on:
+  schedule:
+    - cron: '32 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  psi-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Fetch Score from Google API
+        id: psi
+        run: |
+          RESPONSE=$(curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://rachel-demo.oxypteros.com&strategy=mobile&category=performance&key=${{ secrets.PAGESPEED_API_KEY }}")
+          
+          SCORE_RAW=$(echo $RESPONSE | jq '.lighthouseResult.categories.performance.score')
+          
+          if [ "$SCORE_RAW" == "null" ] || [ -z "$SCORE_RAW" ]; then
+             echo "❌ Error: Could not fetch score. Check API Key or URL."
+             echo $RESPONSE
+             exit 1
+          fi
+
+          SCORE=$(echo "$SCORE_RAW * 100" | bc | awk '{print int($1+0.5)}')
+          
+          echo "✅ Lighthouse Score: $SCORE"
+          echo "SCORE=$SCORE" >> $GITHUB_ENV
+
+      - name: Generate SVG Badge
+        run: |
+          COLOR="red"
+          if (( $SCORE >= 90 )); then COLOR="266429"; fi
+          if (( $SCORE >= 50 && $SCORE < 90 )); then COLOR="orange"; fi
+          
+          mkdir -p .github/results
+          
+          # Download the Badge as an SVG image
+          curl "https://img.shields.io/badge/PageSpeed-$SCORE-$COLOR?style=flat&logo=pagespeedinsights&logoColor=%234285F4&labelColor=%23F0F0F0" > .github/badges/lighthouse.svg
+
+      - name: Commit Badge
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Update Lighthouse Badge: ${{ env.SCORE }} [skip ci]"
+          file_pattern: .github/badges/lighthouse.svg
