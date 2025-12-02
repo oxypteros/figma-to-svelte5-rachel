@@ -8,11 +8,13 @@
     variants: {
       variant: {
         default: "",
-        icon: "bg-transparent"
+        icon: "bg-transparent",
+        cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 duration-300"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        "icon-lg": "size-10"
+        "icon-lg": "size-10",
+        cta: "pl-4 pr-[5px] py-[5px] md:p-4"
       }
     },
     defaultVariants: {
