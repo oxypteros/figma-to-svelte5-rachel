@@ -30,15 +30,17 @@ jobs:
           SCORE=$(echo "$SCORE_RAW * 100" | bc | awk '{print int($1+0.5)}')
           
           echo "✅ Lighthouse Score: $SCORE"
-          echo "SCORE=$SCORE" >> $GITHUB_ENV
+          echo "score=$SCORE" >> $GITHUB_OUTPUT
 
       - name: Generate SVG Badge
+        env:
+          SCORE: ${{ steps.psi.outputs.score }}
         run: |
           COLOR="red"
           if (( $SCORE >= 90 )); then COLOR="266429"; fi
           if (( $SCORE >= 50 && $SCORE < 90 )); then COLOR="orange"; fi
           
-          mkdir -p .github/results
+          mkdir -p .github/badges
           
           # Download the Badge as an SVG image
           curl "https://img.shields.io/badge/PageSpeed-$SCORE-$COLOR?style=flat&logo=pagespeedinsights&logoColor=%234285F4&labelColor=%23F0F0F0" > .github/badges/lighthouse.svg
@@ -46,5 +48,5 @@ jobs:
       - name: Commit Badge
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Update Lighthouse Badge: ${{ env.SCORE }} [skip ci]"
+          commit_message: "🤖 Update Lighthouse Badge: ${{ steps.psi.outputs.score }} [skip ci]"
           file_pattern: .github/badges/lighthouse.svg
