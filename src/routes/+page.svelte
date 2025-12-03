@@ -4,6 +4,7 @@
   import Cover from "$lib/components/Cover.svelte";
   import Hero from "$lib/components/Hero.svelte";
   import Stats from "$lib/components/sections/Stats.svelte";
+  import Testimonials from "$lib/components/sections/Testimonials.svelte";
 </script>
 
 <SEO
@@ -17,6 +18,7 @@
     <div class="bg-wh-100 dark:bg-bl-90 z-30 relative">
       <Hero />
       <Stats coached="250+" rate="98%" average="5" progress="3x" />
+      <Testimonials />
     </div>
   </main>
   <footer></footer>
