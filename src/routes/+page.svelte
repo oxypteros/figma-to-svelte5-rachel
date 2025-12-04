@@ -5,8 +5,9 @@
   import Hero from "$lib/components/Hero.svelte";
   import Stats from "$lib/components/sections/Stats.svelte";
   import Testimonials from "$lib/components/sections/Testimonials.svelte";
-  import Introduction from '$lib/components/sections/Introduction.svelte';
-  import Services from '$lib/components/sections/Services.svelte';
+  import Introduction from "$lib/components/sections/Introduction.svelte";
+  import Services from "$lib/components/sections/Services.svelte";
+  import HowTo from "$lib/components/sections/HowTo.svelte";
 </script>
 
 <SEO
@@ -23,6 +24,7 @@
       <Testimonials />
       <Introduction />
       <Services />
+      <HowTo />
     </div>
   </main>
   <footer></footer>
