@@ -9,6 +9,7 @@
   import Services from "$lib/components/sections/Services.svelte";
   import HowTo from "$lib/components/sections/HowTo.svelte";
   import Programs from "$lib/components/sections/Programs.svelte";
+  import Results from '$lib/components/sections/Results.svelte';
 </script>
 
 <SEO
@@ -27,6 +28,7 @@
       <Services />
       <HowTo />
       <Programs />
+      <Results />
     </div>
   </main>
   <footer></footer>
