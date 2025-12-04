@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="64" height="64" rx="32" fill="white" fill-opacity="0.4"/>
+<rect x="0.5" y="0.5" width="63" height="63" rx="31.5" stroke="white" stroke-opacity="0.24"/>
+<mask id="path-3-inside-1_1_10386" fill="white">
+<path d="M19 32L26.07 24.93L33.14 32L26.07 39.07L19 32Z"/>
+</mask>
+<path d="M19 32L17.5858 30.5858L16.1716 32L17.5858 33.4142L19 32ZM19 32L20.4142 33.4142L27.4842 26.3442L26.07 24.93L24.6558 23.5158L17.5858 30.5858L19 32ZM26.07 39.07L27.4842 37.6558L20.4142 30.5858L19 32L17.5858 33.4142L24.6558 40.4842L26.07 39.07Z" fill="black" mask="url(#path-3-inside-1_1_10386)"/>
+<mask id="path-5-inside-2_1_10386" fill="white">
+<path d="M45 32L37.93 39.07L30.86 32L37.93 24.93L45 32Z"/>
+</mask>
+<path d="M45 32L46.4142 33.4142L47.8284 32L46.4142 30.5858L45 32ZM45 32L43.5858 30.5858L36.5158 37.6558L37.93 39.07L39.3442 40.4842L46.4142 33.4142L45 32ZM37.93 24.93L36.5158 26.3442L43.5858 33.4142L45 32L46.4142 30.5858L39.3442 23.5158L37.93 24.93Z" fill="black" mask="url(#path-5-inside-2_1_10386)"/>
+</svg>
