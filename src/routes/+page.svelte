@@ -6,6 +6,7 @@
   import Stats from "$lib/components/sections/Stats.svelte";
   import Testimonials from "$lib/components/sections/Testimonials.svelte";
   import Introduction from '$lib/components/sections/Introduction.svelte';
+  import Services from '$lib/components/sections/Services.svelte';
 </script>
 
 <SEO
@@ -21,6 +22,7 @@
       <Stats coached="250+" rate="98%" average="5" progress="3x" />
       <Testimonials />
       <Introduction />
+      <Services />
     </div>
   </main>
   <footer></footer>
