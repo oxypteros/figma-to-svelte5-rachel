@@ -6,7 +6,7 @@
   const current = testimonials[0];
 </script>
 
-<section class="bg-wh-100 w-full py-14 md:py-24">
+<section class="bg-wh-100 text-bl-100 dark:bg-bl-90 dark:text-wh-100 w-full py-14 md:py-24">
   <h2 class="sr-only">Testimonials</h2>
   <div class="max-w-desktop-container mx-auto flex w-full px-4 md:items-center md:justify-center">
     <div class="flex flex-col gap-4">
@@ -16,7 +16,7 @@
           <Star class="text-yellow size-5" />
         {/each}
       </div>
-      <q class="text-h6 text-bl-100 md:text-h3 text-pretty sm:w-130 md:w-201.5">{current.quote}</q>
+      <q class="text-h6 md:text-h3 text-pretty sm:w-130 md:w-201.5">{current.quote}</q>
       <div class="flex items-center gap-4">
         <img
           width="64"
@@ -25,10 +25,10 @@
           alt={current.alt}
           loading="lazy"
           decoding="async"
-          class="roounded-full bg-wh-100 object-cover"
+          class="roounded-full bg-transparent object-cover"
         />
         <div class="flex flex-col">
-          <span class="text-1 text-bl-100">{current.name}</span>
+          <span class="text-1">{current.name}</span>
           <span class="text-3 text-bl-50">{current.program} - {current.date}</span>
         </div>
       </div>
