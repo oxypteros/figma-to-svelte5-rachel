@@ -8,6 +8,7 @@
   import Introduction from "$lib/components/sections/Introduction.svelte";
   import Services from "$lib/components/sections/Services.svelte";
   import HowTo from "$lib/components/sections/HowTo.svelte";
+  import Programs from "$lib/components/sections/Programs.svelte";
 </script>
 
 <SEO
@@ -25,6 +26,7 @@
       <Introduction />
       <Services />
       <HowTo />
+      <Programs />
     </div>
   </main>
   <footer></footer>
