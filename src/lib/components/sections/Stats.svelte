@@ -2,7 +2,7 @@
   let { coached, rate, average, progress } = $props();
 </script>
 
-<section class="bg-wh-100 w-full py-14 md:py-24">
+<section class="bg-wh-100 text-bl-100 dark:bg-bl-90 dark:text-wh-100 w-full py-14 md:py-24">
   <h2 class="sr-only">Statistics</h2>
   <div class="max-w-desktop-container mx-auto w-full px-4">
     <div
