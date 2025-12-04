@@ -57,7 +57,7 @@
     </div>
     <div class="flex w-full max-w-150 shrink flex-col justify-between lg:max-w-120">
       <div>
-        <span class="text-3 text-bl-50">Meet your coach</span>
+        <span class="text-3 text-bl-50 dark:text-wh-90/80">Meet your coach</span>
         <h2 class="text-h6 lg:text-h3">Hi, I'm Rachel Stone</h2>
         <article class="text-3 mt-2 space-y-4">
           <p>

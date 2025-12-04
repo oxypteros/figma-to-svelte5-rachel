@@ -29,7 +29,9 @@
         />
         <div class="flex flex-col">
           <span class="text-1">{current.name}</span>
-          <span class="text-3 text-bl-50">{current.program} - {current.date}</span>
+          <span class="text-3 text-bl-50 dark:text-wh-90/80"
+            >{current.program} - {current.date}</span
+          >
         </div>
       </div>
     </div>

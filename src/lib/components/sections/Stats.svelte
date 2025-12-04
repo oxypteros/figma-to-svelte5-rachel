@@ -14,7 +14,7 @@
           <span class="text-h2">{coached}</span>
           <span class="text-1">Women Coached</span>
         </h3>
-        <span class="text-3 text-bl-50 w-55.5"
+        <span class="text-3 text-bl-50 dark:text-wh-90/80 w-55.5"
           >From postpartum recovery to full transformations</span
         >
       </div>
@@ -25,7 +25,8 @@
           <span class="text-h2">{rate}</span>
           <span class="text-1">Consistency Rate</span>
         </h3>
-        <span class="text-3 text-bl-50 w-55.5">Clients report staying on track week after week</span
+        <span class="text-3 text-bl-50 dark:text-wh-90/80 w-55.5"
+          >Clients report staying on track week after week</span
         >
       </div>
 
@@ -35,7 +36,7 @@
           <span class="text-h2">{average}</span>
           <span class="text-1">Average Feedback</span>
         </h3>
-        <span class="text-3 text-bl-50 w-55.5"
+        <span class="text-3 text-bl-50 dark:text-wh-90/80 w-55.5"
           >Based on client satisfaction and progress surveys</span
         >
       </div>
@@ -46,7 +47,7 @@
           <span class="text-h2">{progress}</span>
           <span class="text-1">Faster Progress</span>
         </h3>
-        <span class="text-3 text-bl-50 w-55.5"
+        <span class="text-3 text-bl-50 dark:text-wh-90/80 w-55.5"
           >From postpartum recovery to full transformations</span
         >
       </div>

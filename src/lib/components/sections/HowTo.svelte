@@ -8,7 +8,7 @@
   >
     <div class="flex flex-col gap-6">
       <div>
-        <h2 class="text-3 text-bl-50">How it works</h2>
+        <h2 class="text-3 text-bl-50 dark:text-wh-90/80">How it works</h2>
         <span class="text-h6 lg:text-h3 mt-0.5">Your path to lasting results</span>
         <p class="text-3 mt-3">
           Every transformation starts with structure. Here's how we turn goals into real
@@ -41,55 +41,55 @@
           <!-- Hide the numbers from screen readers because the `role="listitem"` already tells them it is a numbered Item.-->
           <span
             aria-hidden="true"
-            class="text-1 text-bl-50 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
+            class="text-1 text-bl-50 dark:text-wh-90/80 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
           ></span>
 
           <span class="text-h6 mb-px">Discovery call</span>
-          <span class="text-bl-50 text-3"
+          <span class="text-bl-50 dark:text-wh-90/80 text-3"
             >We'll explore your goals, challenges, and lifestyle to create the right approach.</span
           >
         </li>
         <li class="group/item flex flex-col" role="listitem">
           <span
             aria-hidden="true"
-            class="text-1 text-bl-50 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
+            class="text-1 text-bl-50 dark:text-wh-90/80 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
           ></span>
 
           <span class="text-h6 mb-px">Personalized Plan</span>
-          <span class="text-bl-50 text-3"
+          <span class="text-bl-50 dark:text-wh-90/80 text-3"
             >Training and nutrition tailored to your lifestyle—realistic,flexible, and sustainable.</span
           >
         </li>
         <li class="group/item flex flex-col" role="listitem">
           <span
             aria-hidden="true"
-            class="text-1 text-bl-50 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
+            class="text-1 text-bl-50 dark:text-wh-90/80 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
           ></span>
 
           <span class="text-h6 mb-px">Weekly Coaching</span>
-          <span class="text-bl-50 text-3"
+          <span class="text-bl-50 dark:text-wh-90/80 text-3"
             >We'll explore your goals, challenges, and lifestyle to create the right approach.</span
           >
         </li>
         <li class="group/item flex flex-col" role="listitem">
           <span
             aria-hidden="true"
-            class="text-1 text-bl-50 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
+            class="text-1 text-bl-50 dark:text-wh-90/80 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
           ></span>
 
           <span class="text-h6 mb-px">Lifestyle Integration</span>
-          <span class="text-bl-50 text-3"
+          <span class="text-bl-50 dark:text-wh-90/80 text-3"
             >We adapt your plan as your schedule, cycle, and needs shift.</span
           >
         </li>
         <li class="group/item flex flex-col" role="listitem">
           <span
             aria-hidden="true"
-            class="text-1 text-bl-50 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
+            class="text-1 text-bl-50 dark:text-wh-90/80 mb-0.5 [counter-increment:section] after:content-['0'_counter(section)]"
           ></span>
 
           <span class="text-h6 mb-px">Long-Term Balance</span>
-          <span class="text-bl-50 text-3"
+          <span class="text-bl-50 dark:text-wh-90/80 text-3"
             >Progress doesn't end here—we'll refine, celebrate, and keep building together.</span
           >
         </li>
