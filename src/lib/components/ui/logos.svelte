@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="bg-wh-100 mt-10 w-full overflow-hidden mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)] p-8"
+  class="bg-wh-100 dark:bg-bl-90 mt-10 w-full overflow-hidden mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)] p-8"
 >
   <h3 class="sr-only">Certifications</h3>
   <ul class="sr-only">
@@ -19,7 +19,7 @@
 
   <div class="animate-marquee flex w-max items-center opacity-20">
     <!-- SET 1 -->
-    <div class="flex items-center gap-16 pr-16 text-bl-100">
+    <div class="flex items-center gap-16 pr-16 text-bl-100 dark:text-wh-100">
       <Issa />
       <Nasm />
       <Ace />
@@ -30,7 +30,7 @@
       <Afaa />
     </div>
     <!-- SET 2 -->
-    <div class="flex items-center gap-16 pr-16 text-bl-100" aria-hidden="true">
+    <div class="flex items-center gap-16 pr-16 text-bl-100 dark:text-wh-100" aria-hidden="true">
       <Issa />
       <Nasm />
       <Ace />
