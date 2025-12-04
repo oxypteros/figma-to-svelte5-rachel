@@ -34,11 +34,11 @@
   }
 </script>
 
-<section class="bg-wh-100 w-full py-14 md:py-24">
+<section class="bg-wh-100 text-bl-100 dark:bg-bl-90 dark:text-wh-100 w-full py-14 md:py-24">
   <div
     class="max-w-desktop-container mx-auto flex w-full flex-col items-center gap-10 px-4 lg:flex-row lg:items-stretch lg:justify-between"
   >
-    <div class="bg-bl-100 relative aspect-544/720 w-full max-w-150 overflow-hidden rounded-xl">
+    <div class="bg-bl-60 relative aspect-544/720 w-full max-w-150 overflow-hidden rounded-xl">
       <video
         use:lazyPlay
         width="544"
@@ -58,8 +58,8 @@
     <div class="flex w-full max-w-150 shrink flex-col justify-between lg:max-w-120">
       <div>
         <span class="text-3 text-bl-50">Meet your coach</span>
-        <h2 class="text-h6 text-bl-100 lg:text-h3">Hi, I'm Rachel Stone</h2>
-        <article class="text-3 text-bl-100 mt-2 space-y-4">
+        <h2 class="text-h6 lg:text-h3">Hi, I'm Rachel Stone</h2>
+        <article class="text-3 mt-2 space-y-4">
           <p>
             For years, I thought strength meant doing more — training harder, eating cleaner,
             sleeping less. I pushed through exhaustion, believing discipline would bring freedom. It
@@ -76,22 +76,28 @@
             psychology-first, and built for lasting balance.
           </p>
           <div class="mt-20 flex justify-end">
-            <span class="sr-only">Rachel Stone</span><Signature class="text-bl-100 h-11 w-37" />
+            <span class="sr-only">Rachel Stone</span><Signature class="h-11 w-37" />
           </div>
         </article>
       </div>
       <div class="mt-8 flex flex-col gap-4">
-        <h3 class="text-1 text-bl-100">My Philosophy</h3>
-        <ul class="text-3 text-bl-100 flex w-full flex-col gap-4 md:flex-row">
-          <li class="bg-wh-80 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5">
+        <h3 class="text-1">My Philosophy</h3>
+        <ul class="text-3 flex w-full flex-col gap-4 md:flex-row">
+          <li
+            class="bg-wh-80 dark:bg-bl-60 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5"
+          >
             <Fire class="size-8" />
             <span>Strength Over Comparison</span>
           </li>
-          <li class="bg-wh-80 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5">
+          <li
+            class="bg-wh-80 dark:bg-bl-60 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5"
+          >
             <Lightning class="size-8" />
             <span>Balance Over Extremes</span>
           </li>
-          <li class="bg-wh-80 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5">
+          <li
+            class="bg-wh-80 dark:bg-bl-60 flex h-32.5 flex-col justify-between rounded-md p-4 md:w-37.5"
+          >
             <Crown class="size-8" />
             <span>Habits Over Quick Fixes</span>
           </li>
