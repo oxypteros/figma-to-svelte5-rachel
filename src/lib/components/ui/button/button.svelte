@@ -8,7 +8,7 @@
     variants: {
       variant: {
         default: "",
-        icon: "bg-bl-100/65 hover:bg-primary rounded",
+        icon: "bg-bl-100/65 hover:bg-primary rounded dark:bg-wh-100/65 dark:hover:bg-primary",
         cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 duration-300",
         primary: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 "
       },
