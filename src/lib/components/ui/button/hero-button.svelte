@@ -13,10 +13,10 @@
     <span class="text-3">Book your call</span>
   </span>
   <span
-    class="bg-bl-80 group-hover:bg-primary relative flex size-10 items-center justify-center overflow-hidden rounded transition-colors duration-300"
+    class="bg-bl-80 dark:bg-wh-100 group-hover:bg-primary dark:group-hover:bg-primary relative flex size-10 items-center justify-center overflow-hidden rounded transition-colors duration-300"
   >
     <ArrowRight
-      class="text-wh-100 group-hover:text-bl-100 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-[150%]"
+      class="text-wh-100 dark:text-bl-100 group-hover:text-bl-100 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-[150%]"
     />
 
     <ArrowRight
