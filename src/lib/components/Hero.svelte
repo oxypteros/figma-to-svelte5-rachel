@@ -15,14 +15,15 @@
     >
       <div class="mb-6 md:mb-10">
         <div
-          class="bg-bl-80 text-wh-100 mb-6 flex w-fit items-center gap-2.5 rounded-full px-4 py-2"
+          class="bg-bl-80 dark:bg-wh-100 text-wh-100 dark:text-bl-90 mb-6 flex w-fit items-center gap-2.5 rounded-full px-4 py-2"
         >
-          <Warranty class="text-wh-100 size-6" />
+          <Warranty class="text-wh-100 size-6 dark:text-bl-90" />
           <span class="text-3">30-Day Money-back Guarantee</span>
         </div>
-
         <div class="mb-4 flex items-center gap-2">
-          <div class="bg-bl-80 border-bl-80 flex w-fit items-center gap-1 rounded-full border-2">
+          <div
+            class="bg-bl-80 dark:bg-wh-100 border-bl-80 flex w-fit items-center gap-1 rounded-full p-0.5"
+          >
             <img
               width="40"
               height="40"
