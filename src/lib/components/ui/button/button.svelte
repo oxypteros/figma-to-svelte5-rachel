@@ -4,17 +4,19 @@
   import { type VariantProps, tv } from "tailwind-variants";
 
   export const buttonVariants = tv({
-    base: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer",
+    base: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer duration-300",
     variants: {
       variant: {
         default: "",
-        icon: "bg-transparent",
-        cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 duration-300"
+        icon: "bg-bl-100/65 hover:bg-primary rounded",
+        cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 duration-300",
+        primary: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-80 hover:text-wh-100 "
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         "icon-lg": "size-10",
-        cta: "pl-4 pr-[5px] py-[5px] md:p-4"
+        cta: "pl-4 pr-[5px] py-[5px] md:p-4",
+        primary: "pl-6 pr-[5px] py-[5px]  w-full  gap-6"
       }
     },
     defaultVariants: {
