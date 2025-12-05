@@ -196,7 +196,9 @@
 @utility text-3 {
   @apply text-body-3 leading-body-3 font-medium tracking-body-3;
 }
-
+@utility philosophy-card {
+  @apply flex h-32.5 flex-col justify-between rounded-md bg-wh-80 p-4 md:w-37.5 dark:bg-bl-60;
+}
 html.lenis,
 html.lenis body {
   height: auto;
