@@ -23,7 +23,7 @@
   <span class="flex w-full items-center justify-between">
     <span class="flex flex-col items-start">
       <span class="text-1">{title}</span>
-      <span class="text-3 text-bl-50 dark:text-wh-90/80">{description}</span>
+      <span class="text-3 text-bl-100/70 dark:text-wh-90/80">{description}</span>
     </span>
 
     <span
