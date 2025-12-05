@@ -10,6 +10,7 @@
   import HowTo from "$lib/components/sections/HowTo.svelte";
   import Programs from "$lib/components/sections/Programs.svelte";
   import Results from '$lib/components/sections/Results.svelte';
+  import FAQ from '$lib/components/sections/FAQ.svelte';
 </script>
 
 <SEO
@@ -29,6 +30,7 @@
       <HowTo />
       <Programs />
       <Results />
+      <FAQ />
     </div>
   </main>
   <footer></footer>
