@@ -12,14 +12,16 @@
         cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-60 hover:text-wh-100 duration-300",
         primary: "bg-primary justify-between rounded hover:bg-bl-60",
         contact:
-          "bg-wh-80 text-bl-100 dark:bg-bl-60 dark:text-wh-100 rounded-md hover:bg-wh-90 dark:hover:bg-bl-70"
+          "bg-wh-80 text-bl-100 dark:bg-bl-60 dark:text-wh-100 rounded-md hover:bg-wh-90 dark:hover:bg-bl-70",
+        social: "bg-transparent"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         "icon-lg": "size-10",
         cta: "pl-4 pr-[5px] py-[5px] md:p-4",
         primary: "pl-6 pr-[5px] py-[5px]  w-full gap-6",
-        contact: "p-6"
+        contact: "p-6",
+        social: "size-8 has-[>svg]:p-0"
       }
     },
     defaultVariants: {
