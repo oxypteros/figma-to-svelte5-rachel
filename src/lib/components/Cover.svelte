@@ -8,6 +8,7 @@
     <img
       decoding="async"
       loading="eager"
+      fetchpriority="high"
       width="2912"
       height="1632"
       src="/img/cover/2912w.webp"
