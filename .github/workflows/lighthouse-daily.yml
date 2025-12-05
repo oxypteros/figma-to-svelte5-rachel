@@ -1,7 +1,7 @@
 name: Daily Lighthouse Audit
 on:
   schedule:
-    - cron: '32 3 * * *'
+    - cron: "32 3 * * *"
   workflow_dispatch:
 
 jobs:
@@ -9,26 +9,40 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      #  Wake up the Cloudflare Worker
+      - name: Warm up Server
+        run: |
+          echo "🔥 Sending wake-up request to Cloudflare..."
+          # Send a request and discard, checking for a 200 OK
+          curl -s -o /dev/null https://rachel-demo.oxypteros.com
+
+          # Wait 13 seconds to ensure the worker is fully  ready
+          echo "⏳ Waiting for worker stabilization..."
+          sleep 13
+
       - name: Fetch Score from Google API
         id: psi
         run: |
+          # Run the audit
           RESPONSE=$(curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://rachel-demo.oxypteros.com&strategy=mobile&category=performance&key=${{ secrets.PAGESPEED_API_KEY }}")
-          
+
           SCORE_RAW=$(echo $RESPONSE | jq '.lighthouseResult.categories.performance.score')
-          
+
+          # Debugging: Print response if null
           if [ "$SCORE_RAW" == "null" ] || [ -z "$SCORE_RAW" ]; then
-             echo "❌ Error: Could not fetch score. Check API Key or URL."
+             echo "❌ Error: Could not fetch score."
+             echo "Response from Google:"
              echo $RESPONSE
              exit 1
           fi
 
           SCORE=$(echo "$SCORE_RAW * 100" | bc | awk '{print int($1+0.5)}')
-          
+
           echo "✅ Lighthouse Score: $SCORE"
           echo "score=$SCORE" >> $GITHUB_OUTPUT
 
@@ -39,9 +53,8 @@ jobs:
           COLOR="red"
           if (( $SCORE >= 90 )); then COLOR="266429"; fi
           if (( $SCORE >= 50 && $SCORE < 90 )); then COLOR="orange"; fi
-          
+
           mkdir -p .github/badges
-          
           # Download the Badge as an SVG image
           curl "https://img.shields.io/badge/PageSpeed-$SCORE-$COLOR?style=flat&logo=pagespeedinsights&logoColor=%234285F4&labelColor=%23F0F0F0" > .github/badges/lighthouse.svg
 
