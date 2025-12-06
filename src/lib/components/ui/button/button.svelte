@@ -13,7 +13,7 @@
         primary: "bg-primary justify-between rounded hover:bg-bl-60",
         contact:
           "bg-wh-80 text-bl-100 dark:bg-bl-60 dark:text-wh-100 rounded-md hover:bg-wh-90 dark:hover:bg-bl-70",
-        social: "bg-transparent"
+        social: "bg-bl-100 rounded-full text-wh-100 hover:bg-primary hover:text-bl-100"
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -21,7 +21,7 @@
         cta: "pl-4 pr-[5px] py-[5px] md:p-4",
         primary: "pl-6 pr-[5px] py-[5px]  w-full gap-6",
         contact: "p-6",
-        social: "size-8 has-[>svg]:p-0"
+        social: "size-8"
       }
     },
     defaultVariants: {
