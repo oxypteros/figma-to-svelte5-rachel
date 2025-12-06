@@ -12,7 +12,7 @@
 > _Performance is continuously monitored with daily Google PageSpeed audits._
 
 <br />
-<img src="https://raw.githubusercontent.com/oxypteros/figma-to-svelte5-rachel/refs/heads/main/.github/img/rachel-screenshot.webp" alt="Project Banner" width="100%" style="border-radius: 20px;">
+<img src="https://raw.githubusercontent.com/oxypteros/figma-to-svelte5-rachel/refs/heads/main/.github/img/hero-screenshot.webp" alt="Project cover" width="100%">
 
 > **Live Demo:** [https://rachel-demo.oxypteros.com](https://rachel-demo.oxypteros.com)
 
@@ -89,6 +89,7 @@ This demo covers a **Vertical Slice** (Home Page), showcasing what a production 
 ```
 
 3. **Configure Environment Secrets**
+
    Rename the example file to `.env` to enable the contact form:
    Optional: Edit `.env` and add your [Resend API Key](https://resend.com/) if you want to test the email functionality.
 
