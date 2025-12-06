@@ -1,7 +1,8 @@
 <script lang="ts">
   import { Button } from "$lib/components/ui/button/index.js";
   import { toggleMode } from "mode-watcher";
-  import NavMenu from "$lib/components/ui/nav-menu.svelte";
+  import HeaderMenu from "$lib/components/ui/header-menu.svelte";
+  import SocialMenu from "$lib/components/ui/social-menu.svelte";
 
   import Logo from "~icons/rachel/logo";
   import Hamburger from "~icons/rachel/hamburger";
@@ -35,7 +36,7 @@
     <nav
       bind:this={navRef}
       aria-label="Main navigation"
-      class="relative z-50 flex flex-col bg-bl-100/65 backdrop-blur-md overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+      class="relative z-50 flex flex-col bg-bl-100/65 backdrop-blur-sm overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
        {isOpen ? 'rounded-md p-4 max-w-fit' : 'rounded-4xl px-4 py-2 max-w-39.5'}"
     >
       <div class="flex w-full items-center justify-between">
@@ -75,24 +76,25 @@
         class="grid transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
                {isOpen ? 'grid-rows-[1fr] opacity-100 pt-4' : 'grid-rows-[0fr] opacity-0 pt-0'}"
       >
-        <div class="overflow-hidden min-w-40">
-          <NavMenu onclick={closeMenu} />
+        <div class="overflow-hidden min-w-40 px-2">
+          <HeaderMenu onclick={closeMenu} />
+          <SocialMenu />
         </div>
       </div>
     </nav>
 
-    <!-- THEME TOGGLE -->
+    <!-- Theme toggle -->
     <Button
       onclick={toggleMode}
       variant="icon"
       size="icon-lg"
-      class="group bg-bl-100/65 backdrop-blur-sm hover:bg-bl-100 rounded"
+      class="group backdrop-blur-sm"
     >
       <SunIcon
-        class="text-wh-100 size-5 scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90 group-hover:text-wh-100 duration-300"
+        class="text-wh-100 size-5 scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90 group-hover:text-bl-100 duration-300"
       />
       <MoonIcon
-        class="absolute size-5 text-wh-100 scale-0 rotate-90 transition-all! dark:scale-100 dark:rotate-0 group-hover:text-wh-100 duration-300"
+        class="absolute size-5 text-wh-100 group-hover:text-bl-100 scale-0 rotate-90 transition-all! dark:scale-100 dark:rotate-0  duration-300"
       />
       <span class="sr-only">Toggle theme</span>
     </Button>
