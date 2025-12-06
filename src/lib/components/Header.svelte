@@ -30,7 +30,7 @@
 
 <svelte:window onclick={onWindowClick} onkeydown={(e) => e.key === "Escape" && closeMenu()} />
 
-<header class="fixed top-0 z-50 w-full p-4">
+<header class="fixed top-0 z-50 w-full pt-4">
   <div class="max-w-desktop-container mx-auto mt-4 w-full px-4 flex items-start justify-between">
     <nav
       bind:this={navRef}
