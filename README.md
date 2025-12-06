@@ -90,13 +90,11 @@ This demo covers a **Vertical Slice** (Home Page), showcasing what a production 
 
 3. **Configure Environment Secrets**
 
-   Rename the example file to `.env` to enable the contact form:
-   Optional: Edit `.env` and add your [Resend API Key](https://resend.com/) if you want to test the email functionality.
-
 ```bash
 cp .env.example .env
 ```
-
+   (*Optional*: Edit `.env` and add your [Resend API Key](https://resend.com/) if you want to test the email functionality.)  
+   
 4. **Start development server**
 
 ```bash
