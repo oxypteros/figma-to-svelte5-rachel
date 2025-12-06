@@ -12,6 +12,7 @@
   import Results from "$lib/components/sections/Results.svelte";
   import FAQ from "$lib/components/sections/FAQ.svelte";
   import Contact from "$lib/components/sections/Contact.svelte";
+  import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <SEO
@@ -35,5 +36,5 @@
       <Contact />
     </div>
   </main>
-  <footer></footer>
+  <Footer />
 </div>
