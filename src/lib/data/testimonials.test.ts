@@ -33,9 +33,9 @@ describe("Testimonials Data Integrity", () => {
       // Alt text should be descriptive
       expect(item.alt.trim().length).toBeGreaterThan(3);
 
-      // Screen readers already say "Image", so alt text shouldn't start with "Image of..."
-      expect(item.alt.toLowerCase().startsWith("image of")).toBe(false);
-      expect(item.alt.toLowerCase().startsWith("picture of")).toBe(false);
+      // alt text shouldn't start with "Image or Picture"
+      expect(item.alt.toLowerCase().startsWith("image")).toBe(false);
+      expect(item.alt.toLowerCase().startsWith("picture")).toBe(false);
     });
   });
 
@@ -45,7 +45,6 @@ describe("Testimonials Data Integrity", () => {
       // Image path must start with /
       expect(item.image.startsWith("/")).toBe(true);
 
-      // Resolve the full path on your hard drive
       const staticFolderPath = path.resolve(process.cwd(), "static");
       const fullImagePath = path.join(staticFolderPath, item.image);
 
