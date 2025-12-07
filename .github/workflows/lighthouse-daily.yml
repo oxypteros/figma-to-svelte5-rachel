@@ -1,7 +1,7 @@
 name: Daily Lighthouse Audit
 on:
   schedule:
-    - cron: "32 3 * * *"
+    - cron: "43 5 * * *"
   workflow_dispatch:
 
 jobs:
@@ -14,47 +14,55 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Fetch Score from Google API (Best of 3)
+      - name: Fetch Score from Google API
         id: psi
         run: |
           URL="https://rachel-demo.oxypteros.com"
           API_KEY="${{ secrets.PAGESPEED_API_KEY }}"
           MAX_SCORE=0
-          
-          echo "🚀 Starting Lighthouse Audit (Best of 3)..."
+
+          echo "🔥 Warming up: Sending a request via Google PSI..."
+
+          # Don't capture the output, we just want Google to hit it.
+          curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$URL&strategy=mobile&category=performance&key=$API_KEY" > /dev/null
+
+          echo "⏳ Waiting 30 seconds for Cloudflare Cache/Worker to settle..."
+          sleep 30
+
+          echo "🚀 Starting Actual Audit (Best of 3)..."
 
           for i in {1..3}
           do
             echo "Attempt $i/3..."
             
-            # Run the audit
             RESPONSE=$(curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=$URL&strategy=mobile&category=performance&key=$API_KEY")
-            
-            # Extract Score (0 to 1)
             SCORE_RAW=$(echo $RESPONSE | jq '.lighthouseResult.categories.performance.score')
 
-            # Error handling
             if [ "$SCORE_RAW" == "null" ] || [ -z "$SCORE_RAW" ]; then
                echo "❌ Error: Could not fetch score on attempt $i."
                continue
             fi
 
-            # Convert 0.93 to 93
             CURRENT_SCORE=$(echo "$SCORE_RAW * 100" | bc | awk '{print int($1+0.5)}')
             echo "📊 Run $i Score: $CURRENT_SCORE"
 
-            # Update Max Score
             if [ "$CURRENT_SCORE" -gt "$MAX_SCORE" ]; then
               MAX_SCORE=$CURRENT_SCORE
             fi
 
-            # Small sleep between runs
+            # If we get high score, stop early to save API calls/time
+            if [ "$CURRENT_SCORE" -ge 95 ]; then
+              echo "🚀 Excellent score achieved. Stopping early."
+              break
+            fi
+
+            # Sleep between actual measurement runs
             if [ $i -lt 3 ]; then
-              echo "💤 Cooling down for 13 seconds..."
-              sleep 13
+              echo "💤 Cooling down for 30 seconds..."
+              sleep 30
             fi
           done
-          
+
           if [ "$MAX_SCORE" -eq "0" ]; then
              echo "❌ Failed to get any valid score."
              exit 1
@@ -72,7 +80,6 @@ jobs:
           if (( $SCORE >= 50 && $SCORE < 90 )); then COLOR="orange"; fi
 
           mkdir -p .github/badges
-          # Download the Badge as an SVG image
           curl "https://img.shields.io/badge/PageSpeed-$SCORE-$COLOR?style=flat&logo=pagespeedinsights&logoColor=%234285F4&labelColor=%23F0F0F0" > .github/badges/lighthouse.svg
 
       - name: Commit Badge
