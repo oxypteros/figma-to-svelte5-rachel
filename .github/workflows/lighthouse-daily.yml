@@ -51,7 +51,7 @@ jobs:
             fi
 
             # If we get high score, stop early to save API calls/time
-            if [ "$CURRENT_SCORE" -ge 95 ]; then
+            if [ "$CURRENT_SCORE" -ge 99 ]; then
               echo "🚀 Excellent score achieved. Stopping early."
               break
             fi
