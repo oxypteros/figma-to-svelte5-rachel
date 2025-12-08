@@ -10,7 +10,7 @@
     isSubmitting = true;
 
     return async ({ update, result }) => {
-      await update(); 
+      await update();
       isSubmitting = false;
 
       if (result.type === "success") {
@@ -37,42 +37,36 @@
   <!-- FORM STATE -->
   <!-- action="?/contact": the specific action in +page.server.ts -->
   <form method="POST" action="?/contact" use:enhance={handleSubmit} class="flex flex-col gap-6">
-    <label class="text-3">
-      <p>Full name</p>
-      <input
-        type="text"
-        required
-        aria-required="true"
-        name="Full name"
-        placeholder="Enter your full name"
-        class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full bg-wh-100 dark:bg-bl-90"
-      />
-    </label>
-
-    <label class="text-3">
-      <p>Email</p>
-      <input
-        type="email"
-        required
-        aria-required="true"
-        name="email"
-        placeholder="hello@oxypteros.com"
-        class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full bg-wh-100 dark:bg-bl-90"
-      />
-    </label>
-
-    <label class="text-3">
-      <p>Message</p>
-      <textarea
-        required
-        name="Message"
-        aria-required="true"
-        rows="3"
-        placeholder="Tell me about your project..."
-        class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full resize-none bg-wh-100 dark:bg-bl-90"
-      ></textarea>
-    </label>
-
+    <label for="full-name" class="text-3">Full name </label>
+    <input
+      id="full-name"
+      type="text"
+      required
+      aria-required="true"
+      name="Full name"
+      placeholder="Enter your full name"
+      class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full bg-wh-100 dark:bg-bl-90"
+    />
+    <label for="email" class="text-3">Email</label>
+    <input
+      id="email"
+      type="email"
+      required
+      aria-required="true"
+      name="email"
+      placeholder="hello@oxypteros.com"
+      class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full bg-wh-100 dark:bg-bl-90"
+    />
+    <label for="message" class="text-3">Message</label>
+    <textarea
+      id="message"
+      required
+      name="Message"
+      aria-required="true"
+      rows="3"
+      placeholder="Tell me about your project..."
+      class="p-4 text-3 text-bl-50 dark:text-wh-90/80 w-full resize-none bg-wh-100 dark:bg-bl-90 border-b-2 border-bl-100/10"
+    ></textarea>
     <PrimaryBtn
       label={isSubmitting ? "Sending..." : "Send Message"}
       type="submit"
