@@ -33,18 +33,26 @@
     <div
       class="reveal bg-bl-60 relative aspect-544/720 w-full max-w-150 overflow-hidden rounded-xl"
     >
+      <enhanced:img
+        src={videoPoster}
+        alt="Rachel Stone Portrait"
+        class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+        loading="lazy"
+        decoding="async"
+        width="544"
+        height="720"
+      />
       <video
         use:lazyPlay
         width="544"
         height="720"
-        poster={videoPoster}
         preload="none"
         loop
         muted
         playsinline
         tabindex="-1"
-        class="object-cover h-full w-full rounded-xl object-center"
-        aria-label="Close-up portrait video of Rachel Stone looking confident"
+        class="object-cover h-full w-full rounded-xl object-center relative z-10"
+        aria-label="Close-up portrait video of Rachel Stone looking confident after a workout"
       >
         <source src={videoWebm} type="video/webm" />
         <source src={videoMp4} type="video/mp4" />
