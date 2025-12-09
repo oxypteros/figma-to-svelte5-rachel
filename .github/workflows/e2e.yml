@@ -23,6 +23,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+        # ESLint
       - name: Run ESLint
         id: eslint
         # Allow error to generate the 'FAIL' badge below
@@ -47,6 +48,7 @@ jobs:
           -d style=flat \
           -d logo=eslint \
           -d logoColor=%234B32C3 \
+          -d labelColor=%23F0F0F0 \
           > .github/badges/eslint.svg
 
           if ! grep -q "^<svg" .github/badges/vitest.svg; then
