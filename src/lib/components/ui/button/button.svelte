@@ -7,7 +7,7 @@
     base: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap outline-none transition-all focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 cursor-pointer duration-300",
     variants: {
       variant: {
-        default: "",
+        nav: "text-wh-100 hover:text-primary",
         icon: "bg-bl-100/65 hover:bg-primary rounded dark:bg-bl-100/65 dark:hover:bg-primary",
         cta: "bg-primary text-bl-100 justify-between rounded hover:bg-bl-60 hover:text-wh-100 duration-300",
         primary: "bg-primary justify-between rounded hover:bg-bl-60",
@@ -25,8 +25,8 @@
       }
     },
     defaultVariants: {
-      variant: "default",
-      size: "default"
+      variant: "primary",
+      size: "primary"
     }
   });
 
@@ -43,8 +43,8 @@
 <script lang="ts">
   let {
     class: className,
-    variant = "default",
-    size = "default",
+    variant = "primary",
+    size = "primary",
     ref = $bindable(null),
     href = undefined,
     type = "button",
@@ -55,7 +55,7 @@
 </script>
 
 {#if href}
-  <a
+   <a
     bind:this={ref}
     data-slot="button"
     class={cn(buttonVariants({ variant, size }), className)}
