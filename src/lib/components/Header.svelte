@@ -71,7 +71,9 @@
       </div>
       <div
         class="grid transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
-               {isOpen ? 'grid-rows-[1fr] opacity-100 pt-4' : 'grid-rows-[0fr] opacity-0 pt-0'}"
+               {isOpen
+          ? 'grid-rows-[1fr] opacity-100 pt-4 visible'
+          : 'grid-rows-[0fr] opacity-0 pt-0 invisible'}"
       >
         <div class="overflow-hidden min-w-40 px-2">
           <HeaderMenu onclick={closeMenu} />
