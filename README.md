@@ -6,7 +6,7 @@
 
 ## Testing & Deployment
 
-[![Vitest](./.github/badges/vitest.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Playwright](./.github/badges/playwright.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Deployment Status](https://img.shields.io/website?url=https://rachel-demo.oxypteros.com&up_message=ONLINE&down_message=OFFLINE&style=flat&logo=cloudflare&logoColor=%23F38020&labelColor=%23F0F0F0&up_color=%23266429&down_color=red)](https://rachel-demo.oxypteros.com) [![Pagespeed](./.github/badges/lighthouse.svg)](https://pagespeed.web.dev/report?url=https://rachel-demo.oxypteros.com)
+[![ESlint](./.github/badges/eslint.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Vitest](./.github/badges/vitest.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Playwright](./.github/badges/playwright.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Deployment Status](https://img.shields.io/website?url=https://rachel-demo.oxypteros.com&up_message=ONLINE&down_message=OFFLINE&style=flat&logo=cloudflare&logoColor=%23F38020&labelColor=%23F0F0F0&up_color=%23266429&down_color=red)](https://rachel-demo.oxypteros.com) [![Pagespeed](./.github/badges/lighthouse.svg)](https://pagespeed.web.dev/report?url=https://rachel-demo.oxypteros.com)
 
 > _Automated E2E testing pipeline includes Vitest and Playwright/Axe-Core checks on every commit._  
 > _Performance is continuously monitored with daily Google PageSpeed audits._
@@ -93,8 +93,9 @@ This demo covers a **Vertical Slice** (Home Page), showcasing what a production 
 ```bash
 cp .env.example .env
 ```
-   (*Optional*: Edit `.env` and add your [Resend API Key](https://resend.com/) if you want to test the email functionality.)  
-   
+
+(_Optional_: Edit `.env` and add your [Resend API Key](https://resend.com/) if you want to test the email functionality.)
+
 4. **Start development server**
 
 ```bash
