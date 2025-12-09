@@ -16,7 +16,7 @@
     </div>
 
     <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
-      {#each programs as program, i}
+      {#each programs as program, i (program.id)}
         <!-- i * 150 means: 1st card = 0ms, 2nd card = 150ms, 3rd card = 300ms -->
         <div use:inView class="reveal h-full" style="transition-delay: {i * 150}ms;">
           <ProgramCard data={program} />
