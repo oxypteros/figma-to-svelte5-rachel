@@ -30,6 +30,8 @@
               src={user1}
               alt="A smiling woman with an orange bandana"
               class="object-cover"
+              decoding="async"
+              loading="eager"
             />
             <img
               width="40"
@@ -37,6 +39,8 @@
               src={user2}
               alt="A happy smiling woman with thick curly hair"
               class="object-cover"
+              decoding="async"
+              loading="eager"
             />
           </div>
           <div class="text-wh-100 flex flex-col">
@@ -48,7 +52,8 @@
             </div>
           </div>
         </div>
-        <h1 class="text-wh-100 text-h5 md:text-h1">
+        <h1 class="text-wh-100 text-h5 md:text-h1 will-change-transform"
+          style="text-rendering: optimizeSpeed;">
           Because your best self isn't behind you, it's ahead
         </h1>
       </div>
