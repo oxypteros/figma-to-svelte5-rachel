@@ -5,7 +5,7 @@ export type IconName = "Github" | "Instagram" | "X" | "YouTube" | "Email";
 export interface SocialItem {
   id: string;
   href: string;
-  icon: IconName; 
+  icon: IconName;
   label: string;
   inTab?: boolean;
 }
@@ -23,23 +23,23 @@ export const socialItems: SocialItem[] = [
     icon: "Instagram",
     label: "Instagram homepage (opens in a new tab)"
   },
-  { 
-    id: "X", 
-    href: "https://x.com", 
-    icon: "X", 
-    label: "X homepage (opens in a new tab)" 
+  {
+    id: "X",
+    href: "https://x.com",
+    icon: "X",
+    label: "X homepage (opens in a new tab)"
   },
-  { 
-    id: "YouTube", 
-    href: "https://youtube.com", 
-    icon: "YouTube", 
-    label: "YouTube homepage (opens in a new tab)" 
+  {
+    id: "YouTube",
+    href: "https://youtube.com",
+    icon: "YouTube",
+    label: "YouTube homepage (opens in a new tab)"
   },
-  { 
-    id: "Contact", 
-    href: "#contact-anchor", 
-    icon: "Email", 
+  {
+    id: "Contact",
+    href: "#contact-anchor",
+    icon: "Email",
     label: "Contact Oxypteros",
-    inTab: false,
+    inTab: false
   }
 ];
