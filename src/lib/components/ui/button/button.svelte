@@ -55,7 +55,7 @@
 </script>
 
 {#if href}
-   <a
+  <a
     bind:this={ref}
     data-slot="button"
     class={cn(buttonVariants({ variant, size }), className)}
