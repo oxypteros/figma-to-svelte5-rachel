@@ -9,6 +9,7 @@
 [![ESlint](./.github/badges/eslint.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Vitest](./.github/badges/vitest.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Playwright](./.github/badges/playwright.svg)](https://github.com/oxypteros/figma-to-svelte5-rachel/actions) [![Deployment Status](https://img.shields.io/website?url=https://rachel-demo.oxypteros.com&up_message=ONLINE&down_message=OFFLINE&style=flat&logo=cloudflare&logoColor=%23F38020&labelColor=%23F0F0F0&up_color=%23266429&down_color=red)](https://rachel-demo.oxypteros.com) [![Pagespeed](./.github/badges/lighthouse.svg)](https://pagespeed.web.dev/report?url=https://rachel-demo.oxypteros.com)
 
 > _Automated E2E testing pipeline includes Vitest and Playwright/Axe-Core checks on every commit._  
+> _Accessibility verified via **WAVE**, **Axe**, and manual **NVDA** screen reader audits._
 > _Performance is continuously monitored with daily Google PageSpeed audits._
 
 <br />
@@ -62,10 +63,11 @@ This demo covers a **Vertical Slice** (Home Page), showcasing what a production 
 
 ### 3. Accessibility (a11y)
 
-- Semantic HTML5.
-- Hidden decorative assets.
-- Screen-reader-only text for context where needed.
-- Motion-sensitive animations respecting `prefers-reduced-motion`.
+- **Semantic Architecture:** Proper HTML5 landmarks, headings and region definitions.
+- **Automated Audits:** 100% passing scores on **WAVE** and **Axe DevTools**.
+- **Screen Reader Verified:** Manually tested with **NVDA** to ensure meaningful and logical reading order.
+- **Keyboard Navigation:** Full focus management (no traps), visible focus indicators, and logical tab flow.
+- **Inclusive Design:** Motion-sensitive animations respecting `prefers-reduced-motion`.
 
 ### 4. UI Features
 
