@@ -4,6 +4,7 @@
 
   // Render only the first testimonial from the results json
   const current = results[0];
+  const starsArray = Array.from({ length: current.stars }, (_, i) => i);
 </script>
 
 <div>
@@ -21,7 +22,7 @@
 
   <div class="flex my-5">
     <span class="sr-only">{current.stars} stars out of five</span>
-    {#each Array(current.stars) as _}
+    {#each starsArray as i (i)}
       <Star class="text-yellow size-5" />
     {/each}
   </div>
