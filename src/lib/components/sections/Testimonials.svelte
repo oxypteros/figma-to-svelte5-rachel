@@ -4,6 +4,7 @@
   import { inView } from "$lib/utils/animations";
 
   const current = testimonials[0];
+  const starsArray = Array.from({ length: current.stars }, (_, i) => i);
 </script>
 
 <section class="w-full py-14 md:py-24">
@@ -17,7 +18,7 @@
       <!-- STARS -->
       <div class="flex">
         <span class="sr-only">{current.stars} stars out of five</span>
-        {#each Array(current.stars) as _, i}
+        {#each starsArray as i (i)}
           <div
             class="star-pop origin-center will-change-transform motion-reduce:transform-none"
             style="transition-delay: {i * 50}ms;"
