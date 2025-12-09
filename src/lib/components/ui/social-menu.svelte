@@ -19,7 +19,7 @@
 </script>
 
 <ul class="mt-8 flex w-full flex-row gap-2 md:mt-4 md:justify-end">
-  {#each socialItems as item}
+  {#each socialItems as item (item.id)}
     {@const IconComponent = iconMap[item.icon]}
     {@const isExternal = item.inTab !== false}
     <li>
