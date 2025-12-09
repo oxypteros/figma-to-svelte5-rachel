@@ -6,7 +6,7 @@
     schemaDesc = "Demo project: a Figma-to-Svelte 5 conversion, featuring responsive UI, accessibility best practices, and high performance.",
     developerName = "Oxypteros",
     repoUrl = "https://github.com/oxypteros/figma-to-svelte5-rachel",
-    image = "https://rachel-demo.oxypteros.com/seo-image.jpg"
+    image = "https://rachel-demo.oxypteros.com/figma-to-svelte5.png"
   } = $props();
 
   const portfolioUrl = "https://oxypteros.com";
