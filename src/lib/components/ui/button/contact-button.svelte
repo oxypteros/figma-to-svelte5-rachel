@@ -16,7 +16,7 @@
   target="_blank"
   variant="contact"
   size="contact"
-  class="group flex grow flex-col items-start justify-between"
+  class="group flex h-full flex-col items-start justify-between"
 >
   <Icon class="size-8" />
 
