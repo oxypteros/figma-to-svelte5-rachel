@@ -2,15 +2,14 @@
 
 import { describe, it, expect } from "vitest";
 import { headerMenuItems } from "./header-menu";
-import { footerMenuItems } from "./footer-menu"; 
+import { footerMenuItems } from "./footer-menu";
 
 const menuScenarios = [
   { name: "Header", data: headerMenuItems },
-  { name: "Footer", data: footerMenuItems },
+  { name: "Footer", data: footerMenuItems }
 ];
 
 describe.each(menuScenarios)("$name Menu Data", ({ name, data }) => {
-  
   it("should contain menu items", () => {
     expect(data.length).toBeGreaterThan(0);
   });
@@ -45,7 +44,7 @@ describe.each(menuScenarios)("$name Menu Data", ({ name, data }) => {
     // Only check this if the menu actually has a "Home" item
     const home = data.find((i) => i.id === "Home");
     if (home) {
-        expect(home.href).toBe("/");
+      expect(home.href).toBe("/");
     }
   });
 
