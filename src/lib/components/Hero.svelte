@@ -52,8 +52,10 @@
             </div>
           </div>
         </div>
-        <h1 class="text-wh-100 text-h5 md:text-h1 will-change-transform"
-          style="text-rendering: optimizeSpeed;">
+        <h1
+          class="text-wh-100 text-h5 md:text-h1 will-change-transform"
+          style="text-rendering: optimizeSpeed;"
+        >
           Because your best self isn't behind you, it's ahead
         </h1>
       </div>
