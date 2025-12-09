@@ -7,7 +7,7 @@
 </script>
 
 <div class="text-3">
-  {#each items as item}
+  {#each items as item (item.id)}
     <details class="group">
       <summary
         class="flex cursor-pointer list-none items-center justify-between gap-2 py-6 [&::-webkit-details-marker]:hidden"
