@@ -34,8 +34,11 @@
       <div class="flex flex-col items-center gap-2 md:flex-row md:gap-1">
         <div class="flex gap-1">
           Build by
-          <a href="https://oxypteros.com" target="_blank" rel="noopener" aria-label="Oxypteros (opens in a new tab)"
-            ><Oxypteros class="hover:text-primary" /></a
+          <a
+            href="https://oxypteros.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Oxypteros (opens in a new tab)"><Oxypteros class="hover:text-primary" /></a
           >
         </div>
         <span class="hidden md:block">•</span>
