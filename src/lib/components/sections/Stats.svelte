@@ -34,7 +34,7 @@
       use:inView
       class="grid w-full grid-cols-1 gap-10 sm:grid-cols-2 sm:justify-items-center lg:grid-cols-4"
     >
-      {#each stats as stat, i}
+      {#each stats as stat, i (stat.value)}
         <div
           class="stat-card flex w-full max-w-55.5 flex-col"
           style="transition-delay: {i * 150}ms;"
