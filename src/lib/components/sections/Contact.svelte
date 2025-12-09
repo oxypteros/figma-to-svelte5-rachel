@@ -22,7 +22,7 @@
 
     <div class="flex flex-col gap-8 lg:grid lg:grid-cols-2">
       <div class="flex flex-col gap-4">
-        <div use:inView class="reveal delay-200">
+        <div use:inView class="reveal delay-200 grow">
           <ContactButton
             href="https://wa.me/{contactConfig.contact.whatsapp}"
             Icon={Chat}
@@ -30,7 +30,7 @@
             description="Chat directly with coach Rachel"
           />
         </div>
-        <div use:inView class="reveal delay-300">
+        <div use:inView class="reveal delay-300 grow">
           <ContactButton
             href="tel:{contactConfig.contact.phoneNumber}"
             Icon={Call}
