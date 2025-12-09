@@ -7,7 +7,7 @@
     href: string;
     title: string;
     description: string;
-    Icon: Component<any>;
+    Icon: Component;
   }>();
 </script>
 
