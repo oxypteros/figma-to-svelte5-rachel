@@ -40,16 +40,13 @@
        {isOpen ? 'rounded-md p-4 max-w-fit' : 'rounded-4xl px-4 py-2 max-w-39.5'}"
     >
       <div class="flex w-full items-center justify-between">
-        <a href="/" aria-label="Home" class="shrink-0">
-          <Logo class="text-wh-100" />
-        </a>
-
+        <Logo class="text-wh-100 shrink-0" />
         <Button
           onclick={toggleMenu}
           variant="icon"
           size="icon-lg"
           class="bg-transparent dark:bg-transparent relative group shrink-0"
-          aria-label={isOpen ? "Close Menu" : "Open Menu"}
+          aria-label="Toggle Main Menu"
           aria-expanded={isOpen}
           aria-haspopup="true"
         >
@@ -84,12 +81,7 @@
     </nav>
 
     <!-- Theme toggle -->
-    <Button
-      onclick={toggleMode}
-      variant="icon"
-      size="icon-lg"
-      class="group backdrop-blur-sm"
-    >
+    <Button onclick={toggleMode} variant="icon" size="icon-lg" class="group backdrop-blur-sm">
       <SunIcon
         class="text-wh-100 size-5 scale-100 rotate-0 transition-all! dark:scale-0 dark:-rotate-90 group-hover:text-bl-100 duration-300"
       />
