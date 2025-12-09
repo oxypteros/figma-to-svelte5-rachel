@@ -62,7 +62,7 @@
   <div class={currentStyle.list}>
     <h4 class="text-3 mb-2">What's included</h4>
     <ul class="text-3 space-y-2">
-      {#each data.features as feature}
+      {#each data.features as feature (feature)}
         <li class="flex items-center gap-2">
           <Check class="size-4 shrink-0" />
           {feature}
