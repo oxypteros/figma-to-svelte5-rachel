@@ -35,7 +35,8 @@
         class="bento-card bg-bl-60 flex flex-col justify-between rounded-md p-6 lg:col-span-1 lg:row-start-1 lg:row-end-3"
         style="transition-delay: 0ms;"
       >
-        <span class="text-h6 lg:text-h1">NYC</span>
+        <span class="text-h6 lg:text-h1" aria-hidden="true">NYC</span>
+        <span class="sr-only">New York City</span>
         <div>
           <h3 class="text-1">In-Person Training</h3>
           <p class="text-3 pt-1 opacity-70">
