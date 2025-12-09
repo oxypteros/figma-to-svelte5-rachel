@@ -2,7 +2,7 @@ name: Generate Dev Stack Badges
 on:
   push:
     paths:
-      - 'package.json' 
+      - "package.json"
   #workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - uses: actions/checkout@v4
 
@@ -18,7 +18,7 @@ jobs:
         run: |
           mkdir -p .github/badges
 
-          
+
           # generate_badge "PackageName" "JsonField" "Color" "LogoSlug" "LogoColor" "LabelColor"
           generate_badge() {
             NAME=$1
@@ -55,13 +55,13 @@ jobs:
           }
 
           # Stack badges
-          
+
           # Svelte 
           generate_badge "Svelte" "svelte" "FF3E00" "svelte" "FF3E00" "F0F0F0"
-          
+
           # Tailwind
           generate_badge "Tailwind" "tailwindcss" "06B6D4" "tailwindcss" "06B6D4" "F0F0F0"
-          
+
           # TypeScript
           generate_badge "TypeScript" "typescript" "3178C6" "typescript" "3178C6" "F0F0F0"
 

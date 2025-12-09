@@ -16,7 +16,7 @@ describe("Contact Configuration Data", () => {
   it("should have a valid email format", () => {
     // Check for x@x.x
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+
     if (!emailRegex.test(contact.email)) {
       throw new Error(`Invalid email format detected: "${contact.email}"`);
     }
@@ -24,12 +24,13 @@ describe("Contact Configuration Data", () => {
   });
 
   it("should have a valid phone number for 'tel:' links", () => {
-
     // Optional +, then only digits
     const telLinkRegex = /^\+?[0-9]+$/;
 
     if (!telLinkRegex.test(contact.phoneNumber)) {
-      throw new Error(`Phone number for linking must contain only digits (and optional +). Found: "${contact.phoneNumber}"`);
+      throw new Error(
+        `Phone number for linking must contain only digits (and optional +). Found: "${contact.phoneNumber}"`
+      );
     }
     expect(telLinkRegex.test(contact.phoneNumber)).toBe(true);
   });
@@ -37,9 +38,11 @@ describe("Contact Configuration Data", () => {
   it("should have a valid WhatsApp format", () => {
     // WhatsApp API requires pure digits
     const waRegex = /^[0-9]+$/;
-    
+
     if (!waRegex.test(contact.whatsapp)) {
-       throw new Error(`WhatsApp ID should be pure digits (no +, no spaces). Found: "${contact.whatsapp}"`);
+      throw new Error(
+        `WhatsApp ID should be pure digits (no +, no spaces). Found: "${contact.whatsapp}"`
+      );
     }
     expect(waRegex.test(contact.whatsapp)).toBe(true);
   });
@@ -50,5 +53,4 @@ describe("Contact Configuration Data", () => {
 
     expect(cleanDisplay).toContain(cleanLink); // or .toBe(cleanLink)
   });
-
 });
