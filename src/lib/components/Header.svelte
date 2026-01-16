@@ -52,7 +52,7 @@
         >
           <div class="relative flex items-center justify-center">
             <div
-              class="absolute transition-all duration-300 {isOpen
+              class="absolute transition-all duration-500 {isOpen
                 ? 'opacity-100 rotate-0 scale-100'
                 : 'opacity-0 -rotate-90 scale-50'}"
             >
@@ -60,7 +60,7 @@
             </div>
 
             <div
-              class="transition-all duration-300 {isOpen
+              class="transition-all duration-500 {isOpen
                 ? 'opacity-0 rotate-90 scale-50'
                 : 'opacity-100 rotate-0 scale-100'}"
             >
@@ -70,7 +70,7 @@
         </Button>
       </div>
       <div
-        class="grid transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
+        class="grid transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
                {isOpen
           ? 'grid-rows-[1fr] opacity-100 pt-4 visible'
           : 'grid-rows-[0fr] opacity-0 pt-0 invisible'}"
