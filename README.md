@@ -10,7 +10,7 @@
 
 > _Automated E2E testing pipeline includes **Vitest** and **Playwright/Axe-Core** checks on every commit._  
 > _Accessibility verified via **WAVE**, **Axe**, and manual **NVDA** screen reader audits._  
-> _Performance is continuously monitored with daily **PageSpeed** audits._
+> _Performance is continuously monitored with weekly **PageSpeed** audits._
 
 <br />
 <img src="https://raw.githubusercontent.com/oxypteros/figma-to-svelte5-rachel/refs/heads/main/.github/img/hero-screenshot.webp" alt="Project cover" width="100%">
