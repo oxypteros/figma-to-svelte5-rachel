@@ -1,4 +1,3 @@
-import devtoolsJson from "vite-plugin-devtools-json";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vitest/config";
 import { playwright } from "@vitest/browser-playwright";
@@ -10,7 +9,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit(),
-    devtoolsJson(),
+
     enhancedImages(),
     Icons({
       compiler: "svelte",
