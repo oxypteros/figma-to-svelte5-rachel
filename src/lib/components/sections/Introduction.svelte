@@ -33,7 +33,7 @@
     <div
       class="reveal bg-bl-60 relative aspect-544/720 w-full max-w-150 overflow-hidden rounded-xl"
     >
-      <enhanced:img
+      <img
         src={videoPoster}
         alt="Rachel Stone Portrait"
         class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
